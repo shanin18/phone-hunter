@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!--  font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="banner" class="flex px-2 py-16">
+        <div class="container mx-auto md:flex flex-wrap items-center justify-center">
+            <div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-center leading-tight text-white">Phone Hunter <br> API</h1>
+            </div>
+            <img src="images/transparent.png" alt="">
+        </div>
+    </header>
+
+    <main class="container mx-auto">
+        <section class="py-20 px-2">
+            <!-- search Area -->
+            <div class="text-center">
+                <input id="input-search" class="border py-4 px-6 rounded-full mb-10 shadow-lg outline-none text-lg w-[90%] md:w-[60%]" type="text" placeholder="Search Phones">
+            </div>
+            <h2 class="font-bold text-4xl text-center">Latest Phones</h2>
+            <div id="phones-container" class="pt-8 flex flex-wrap gap-5 justify-center"> 
+                  <!--phoneItems dynamic-->
+            </div>
+
+            <div class="text-center mt-12">
+                <button id="btn-see-all" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-7 rounded-lg text-lg hidden">See All</button>
+            </div>
+
+            <!-- nothing found message -->
+            <h1 id="nothing-found-message" class="text-center mt-8 text-2xl font-semibold text-red-600">Oopsss!Nothing found....</h1>
+        </section>
+
+        <!-- modal -->
+        <section>
+            <input type="checkbox" id="my-modal-3" class="modal-toggle"/>
+            <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <img id="phone-image" alt="">
+                    <h3 id="phone-name" class="text-lg font-bold mt-4">Congratulations random Internet user!</h3>
+                    <div id="phone-details" class="py-4"></div>
+                    <h2 class="text-lg font-bold mb-3">Sensors:</h2>
+                    <div id ="sensors-container"></div>
+                </div>
+            </div>
+            <!-- top button -->
+            <a href="#" class="md:text-2xl bg-yellow-300 p-3 rounded-full fixed bottom-8 right-4"><i class="fa-solid fa-arrow-up"></i></a>
+        </section>
+
+        <!-- spinner -->
+        <!-- <section id="spinner" class="fixed top-1/3 left-1/3">
+            <img src="images/spinner2-unscreen.gif" alt="">
+        </section> -->
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
