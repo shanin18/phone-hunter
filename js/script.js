@@ -77,20 +77,6 @@ const displayPhoneDetails = (data) =>{
         <li class="mb-2">${data.mainFeatures.memory}</li>
     </ul>
     `;
-
-    const sensorContainer = document.getElementById("sensors-container");
-    const sensors = data.mainFeatures.sensors;
-    sensors.forEach(sensor =>{
-        const ul = document.createElement("ul");
-        ul.innerHTML =`
-        <li>${sensor}</;l>
-        `
-        sensorContainer.appendChild(ul);
-    })
 }
 
 loadPhones("iphone");
-
-window.addEventListener("load", ()=>{
-    document.getElementById("spinner").classList.add("hidden")
-})
